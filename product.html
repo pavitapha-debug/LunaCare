@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>สินค้าทั้งหมด — Luna Care</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-wrapper">
+      <a href="index.html" class="brand-logo">Luna Care</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="index.html#moods">คอลเลกชันกลิ่น</a></li>
+          <li><a href="product.html" class="active">สินค้าทั้งหมด</a></li>
+        </ul>
+      </nav>
+      <a href="order.html" class="cart-btn">สั่งซื้อสินค้า</a>
+    </div>
+  </header>
+
+  <!-- Product Catalog Section -->
+  <section>
+    <div class="container">
+      <div class="section-header">
+        <span class="hero-subtitle">The Collection</span>
+        <h2>ผลิตภัณฑ์ดูแลเส้นผม Luna Care</h2>
+        <p>เลือกกลิ่นและขนาดที่เหมาะกับไลฟ์สไตล์ของคุณ มีให้เลือกทั้งขนาดพกพา 50ml และขนาดใช้งานปกติ 170ml</p>
+      </div>
+
+      <!-- ปุ่มกรองตาม Mood (script.js จะ render ปุ่มให้เอง) -->
+      <div id="filter-bar" class="filter-bar"></div>
+
+      <!-- รายการสินค้า (script.js จะโหลดจาก products.json มา render เอง) -->
+      <div id="product-list" class="product-grid"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <a href="index.html" class="brand-logo">Luna Care</a>
+      <p>เติมเต็มทุกมู้ดความหอมที่ใช่ในแบบคุณ เริ่มต้นตั้งแต่สัมผัสแรกกับ Luna Care</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "luna-fresh-50",
+    "name": "ยาสระผมกลิ่น Fresh (ขนาดพกพา)",
+    "mood": "fresh",
+    "type": "shampoo",
+    "size": "50ml",
+    "price": 119,
+    "image": "images/fresh.jpg",
+    "description": "พกพาความหอมสะอาด เบาสบาย ไปปลุกความสดชื่นให้เส้นผมได้ทุกที่ทุกเวลาในขนาดกะทัดรัด"
+  },
+  {
+    "id": "luna-fresh-170",
+    "name": "ยาสระผมกลิ่น Fresh (ขนาดปกติ)",
+    "mood": "fresh",
+    "type": "shampoo",
+    "size": "170ml",
+    "price": 299,
+    "image": "images/fresh.jpg",
+    "description": "เปลี่ยนการสระผมประจำวันให้เป็นการรีเฟรชความสดใส มอบสัมผัสโปร่งสบายและกลิ่นหอมสะอาดติดทนยาวนาน"
+  },
+  {
+    "id": "luna-sweet-50",
+    "name": "ยาสระผมกลิ่น Sweet (ขนาดพกพา)",
+    "mood": "sweet",
+    "type": "shampoo",
+    "size": "50ml",
+    "price": 119,
+    "image": "images/sweet.jpg",
+    "description": "เติมเสน่ห์ความหอมหวานละมุนชวนสบายใจได้ทุกทริป ด้วยขนาดพกพาที่พร้อมดูแลผมของคุณในทุกวัน"
+  },
+  {
+    "id": "luna-sweet-170",
+    "name": "ยาสระผมกลิ่น Sweet (ขนาดปกติ)",
+    "mood": "sweet",
+    "type": "shampoo",
+    "size": "170ml",
+    "price": 299,
+    "image": "images/sweet.jpg",
+    "description": "ปรนนิบัติเส้นผมทุกวันด้วยกลิ่นหอมหวานอ่อนโยน ที่ช่วยสร้างบรรยากาศอบอุ่นและน่ารักในทุกช่วงเวลา"
+  },
+  {
+    "id": "luna-confident-50",
+    "name": "ยาสระผมกลิ่น Confident (ขนาดพกพา)",
+    "mood": "confident",
+    "type": "shampoo",
+    "size": "50ml",
+    "price": 119,
+    "image": "images/confident.jpg",
+    "description": "เสริมความมั่นใจและภาพลักษณ์ที่ดูดีได้แม้ยามเดินทาง ด้วยยาสระผมกลิ่นหอมสะอาดมีระดับขนาดพกพา"
+  },
+  {
+    "id": "luna-confident-170",
+    "name": "ยาสระผมกลิ่น Confident (ขนาดปกติ)",
+    "mood": "confident",
+    "type": "shampoo",
+    "size": "170ml",
+    "price": 299,
+    "image": "images/confident.jpg",
+    "description": "ยกระดับการดูแลเส้นผมในทุกเช้า ให้ผมหอมสะอาด ดูดี และพร้อมสร้างความประทับใจในทุกโอกาสสำคัญ"
+  }
+]

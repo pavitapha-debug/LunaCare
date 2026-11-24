@@ -1,0 +1,505 @@
+/* นำเข้าฟอนต์หรูหราแนว Editorial (Cormorant Garamond / Playfair Display) คู่กับฟอนต์ไทยที่อ่านง่าย (Prompt / Sarabun) */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Prompt:wght@300;400;500&display=swap');
+
+:root {
+  /* Palette: ขาว - ครีม - เบจเข้ม - ทอง/บรอนซ์อ่อน */
+  --bg-primary: #FAF9F6;       /* ขาวงาช้าง (Off-white / Cream) */
+  --bg-secondary: #F3EFEA;     /* ครีมเบจอ่อน */
+  --bg-card: #FFFFFF;          /* ขาวสะอาดสำหรับการ์ด */
+  --text-primary: #2C2A29;     /* เทาเข้มเกือบดำ นุ่มตากว่าดำสนิท */
+  --text-secondary: #6E6A66;   /* น้ำตาลเทาอ่อนสำหรับคำอธิบาย */
+  --accent-bronze: #A68A64;    /* ทอง/บรอนซ์อ่อน */
+  --accent-bronze-hover: #8C7250;
+  --border-subtle: #E2DCD3;    /* เส้นขอบบางๆ สีเบจเข้ม */
+  --border-dark: #4A4643;      /* เส้นขอบปุ่มสีเข้มนุ่มตา */
+
+  /* Mood Accents (แตะเบาๆ เฉพาะจุดเล็กๆ) */
+  --mood-fresh: #2E5A44;       /* เขียวเข้ม */
+  --mood-sweet: #7B618C;       /* ม่วงกลาง */
+  --mood-confident: #3B4D5E;   /* น้ำเงินเทาเข้ม */
+  --mood-romance: #B86B6B;     /* แดงอ่อน */
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Prompt', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Spacing & Layout */
+  --container-width: 1180px;
+  --section-padding: 110px 24px;
+  --transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* =========================================
+   Reset & Base Styles
+   ========================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .brand-logo, .serif-text {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: var(--text-primary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* =========================================
+   Navigation Header
+   ========================================= */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(250, 249, 246, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 22px 24px;
+}
+
+.nav-wrapper {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-logo {
+  font-size: 1.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent-bronze);
+}
+
+.cart-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  padding: 8px 18px;
+  border: 1px solid var(--border-subtle);
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.cart-btn:hover {
+  border-color: var(--accent-bronze);
+  color: var(--accent-bronze);
+}
+
+/* =========================================
+   Hero Section (โปร่ง เรียบหรู)
+   ========================================= */
+.hero {
+  padding: 130px 24px 110px;
+  text-align: center;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.hero-subtitle {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--accent-bronze);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  line-height: 1.25;
+  max-width: 820px;
+  margin: 0 auto 28px;
+  font-weight: 400;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 620px;
+  margin: 0 auto 48px;
+}
+
+/* =========================================
+   Buttons (เส้นบางๆ สีเข้มนุ่มตา)
+   ========================================= */
+.btn {
+  display: inline-block;
+  padding: 14px 36px;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  border: 1px solid var(--border-dark);
+  background-color: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.btn-bronze {
+  border-color: var(--accent-bronze);
+  color: var(--accent-bronze);
+}
+
+.btn-bronze:hover {
+  background-color: var(--accent-bronze);
+  color: #FFFFFF;
+}
+
+.btn-sm {
+  padding: 10px 22px;
+  font-size: 0.82rem;
+}
+
+/* =========================================
+   Section Headers & Mood Indicators
+   ========================================= */
+section {
+  padding: var(--section-padding);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.section-header h2 {
+  font-size: 2.3rem;
+  margin-bottom: 14px;
+}
+
+.section-header p {
+  color: var(--text-secondary);
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* Mood Accent Dots & Subtle Underlines */
+.mood-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.mood-underline {
+  width: 36px;
+  height: 1.5px;
+  margin: 14px auto 20px;
+}
+
+.mood-fresh .mood-dot,
+.mood-fresh .mood-underline { background-color: var(--mood-fresh); }
+
+.mood-sweet .mood-dot,
+.mood-sweet .mood-underline { background-color: var(--mood-sweet); }
+
+.mood-confident .mood-dot,
+.mood-confident .mood-underline { background-color: var(--mood-confident); }
+
+.mood-romance .mood-dot,
+.mood-romance .mood-underline { background-color: var(--mood-romance); }
+
+/* =========================================
+   Mood Showcase Grid (เรียบง่าย ไม่ทาสีฉูดฉาด)
+   ========================================= */
+.mood-section {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 36px;
+}
+
+.mood-card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  padding: 48px 36px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.mood-card:hover {
+  border-color: var(--accent-bronze);
+  transform: translateY(-4px);
+}
+
+.mood-card h3 {
+  font-size: 1.65rem;
+  margin-bottom: 6px;
+}
+
+.mood-card .mood-en {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.mood-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-top: 16px;
+}
+
+/* =========================================
+   Filter Bar & Product Grid
+   ========================================= */
+.filter-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 56px;
+}
+
+.filter-btn {
+  padding: 8px 22px;
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 44px 32px;
+}
+
+.product-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.product-card:hover {
+  border-color: var(--accent-bronze);
+}
+
+.product-img-wrap {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.product-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-img-wrap img {
+  transform: scale(1.03);
+}
+
+.product-info {
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.product-title {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.product-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 18px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.product-price {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--text-primary);
+}
+
+/* =========================================
+   Forms & Cart / Checkout Elements
+   ========================================= */
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 13px 16px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--accent-bronze);
+}
+
+/* =========================================
+   Footer
+   ========================================= */
+footer {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  padding: 72px 24px 48px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+footer .brand-logo {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+}
+
+/* =========================================
+   Responsive (Tablet & Mobile)
+   ========================================= */
+@media (max-width: 992px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 76px 20px;
+  }
+
+  .nav-links {
+    display: none; /* สามารถเปิดใช้เมนูมือถือเพิ่มเติมในหน้า HTML ได้ */
+  }
+
+  .hero {
+    padding: 90px 20px 80px;
+  }
+
+  .section-header {
+    margin-bottom: 48px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .product-info {
+    padding: 24px 20px;
+  }
+}

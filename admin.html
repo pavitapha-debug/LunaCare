@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>รายการคำสั่งซื้อ (Admin) — Luna Care</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* สไตล์เพิ่มเติมเฉพาะตารางหน้า Admin ให้เข้ากับธีมมินิมอล */
+    .table-wrapper {
+      width: 100%;
+      overflow-x: auto;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+    }
+
+    #ordersTable {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+
+    #ordersTable th,
+    #ordersTable td {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: top;
+    }
+
+    #ordersTable th {
+      background-color: var(--bg-secondary);
+      font-weight: 500;
+      color: var(--text-primary);
+      white-space: nowrap;
+      letter-spacing: 0.04em;
+    }
+
+    #ordersTable tbody tr:hover {
+      background-color: var(--bg-primary);
+    }
+
+    #ordersTable tbody tr:last-child td {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-wrapper">
+      <a href="index.html" class="brand-logo">Luna Care</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="product.html">สินค้าทั้งหมด</a></li>
+          <li><a href="admin.html" class="active">จัดการคำสั่งซื้อ</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="cart-btn" onclick="location.reload()">รีเฟรชข้อมูล</button>
+    </div>
+  </header>
+
+  <!-- Admin Orders Table Section -->
+  <section>
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 48px;">
+        <span class="hero-subtitle">Store Management</span>
+        <h2>รายการคำสั่งซื้อทั้งหมด</h2>
+        <p>ข้อมูลคำสั่งซื้อล่าสุดจากระบบ (เรียงจากรายการล่าสุดขึ้นก่อน)</p>
+      </div>
+
+      <div class="table-wrapper">
+        <table id="ordersTable">
+          <thead>
+            <tr>
+              <th>วันเวลา</th>
+              <th>ชื่อลูกค้า</th>
+              <th>เบอร์โทร/Line</th>
+              <th>รายการสินค้า</th>
+              <th>จำนวนเงินรวม</th>
+              <th>หมายเหตุ</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <a href="index.html" class="brand-logo">Luna Care</a>
+      <p>Luna Care Management System</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
